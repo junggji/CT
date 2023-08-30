@@ -1,0 +1,25 @@
+package Codingtest;
+
+public class Ct4 {
+
+    public static int solution(int n, int k) {
+        int answer = 0;
+        int count = 0;
+        int yang, bever;
+        yang = n * 12000;
+        bever = k * 2000;
+        for(int i=1; i<=n; i++) {
+            if(i%10 == 0) {
+                count +=1;
+            }
+        }
+        answer = yang+bever-(count*2000);
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solution(10,3));
+
+    }
+}
