@@ -1,0 +1,28 @@
+package Codingtest;
+
+import java.util.Arrays;
+
+public class Ct4 {
+    static int[] num_list = {2,1,6};
+
+    public static int[] solution(int[] num_list) {
+        int nl = num_list.length;
+        int[] answer = new int[nl+1];
+
+        for(int i=0; i<nl; i++) {
+            answer[i] = num_list[i];
+        }
+        if(num_list[nl-1]>num_list[nl-2]) {
+            answer[nl] = num_list[nl-1] - num_list[nl-2];
+        } else {
+            answer[nl] = num_list[nl-1]*2;
+        }
+
+        return answer;
+    }
+
+        public static void main (String[]args){
+            System.out.println((Arrays.toString(solution(num_list))));
+
+        }
+    }
