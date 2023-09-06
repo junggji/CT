@@ -1,0 +1,29 @@
+package Codingtest;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static java.lang.Math.ceil;
+
+public class Ct4 {
+    static int[] array = {149, 180, 192, 170};
+
+    public static int solution(int[] array, int height) {
+        int answer = 0;
+
+        Arrays.sort(array);
+        for(int i=0; i<array.length-1; i++) {
+            if(array[i]>height) {
+                answer = array.length - i;
+                break;
+            }
+        }
+
+        return answer;
+    }
+
+        public static void main (String[]args){
+            System.out.println(solution(array,167));
+
+        }
+    }
